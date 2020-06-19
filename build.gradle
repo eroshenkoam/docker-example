@@ -14,10 +14,10 @@ repositories {
 
 allure {
     autoconfigure = true
-    version = '2.13.4'
+    version = '2.13.3'
 
     useJUnit5 {
-        version = "2.13.4"
+        version = "2.13.3"
     }
 }
 test {
@@ -26,7 +26,7 @@ test {
 
 dependencies {
     compile('com.codeborne:selenide:5.11.1')
-    compile('org.aeonbits.owner:owner-java8:0.12')
+    compile('org.aeonbits.owner:owner-java8:1.0.12')
     compile('io.qameta.allure:allure-java-commons:2.13.3')
     compile('org.seleniumhq.selenium:selenium-java:3.141.59')
     compile("com.fasterxml.jackson.core:jackson-databind:2.11.0")
