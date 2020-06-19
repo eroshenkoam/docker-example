@@ -26,7 +26,7 @@ public class GithubIssueTest {
 
     @BeforeEach
     public void initDriver() throws IOException {
-        final String url = "http://192.168.90.245:4444/wd/hub";
+        final String url = "http://selenoid:4444/wd/hub";
         RemoteWebDriver driver = new RemoteWebDriver(new URL(url), DesiredCapabilities.chrome());
         driver.manage().window().setSize(new Dimension(1920,1024));
         WebDriverRunner.setWebDriver(driver);
