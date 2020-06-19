@@ -5,14 +5,6 @@ networks:
     driver: bridge
 
 services:
-  jenkins:
-    image: jenkins/jenkins:lts
-    volumes:
-      - ${PWD}/work/jenkins:/var/jenkins_home
-    ports:
-      - 8000:8080
-    networks:
-      - dev
   selenoid:
     image: aerokube/selenoid:latest-release
     volumes:
@@ -26,6 +18,14 @@ services:
     ports:
       - "4444:4444"
     network_mode: bridge
+  jenkins:
+    image: jenkins/jenkins:lts
+    volumes:
+      - ${PWD}/work/jenkins:/var/jenkins_home
+    ports:
+      - 8000:8080
+    networks:
+      - dev
   jira:
     image: atlassian/jira-software
     volumes:
