@@ -1,0 +1,10 @@
+# Idea
+.idea
+*.iml
+
+# Gradle
+.gradle
+build
+
+# Docker
+work

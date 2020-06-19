@@ -1,0 +1,21 @@
+{
+  "chrome": {
+    "default": "75.0",
+    "versions": {
+      "75.0": {
+        "env" : ["LANG=ru_RU.UTF-8", "LANGUAGE=ru:en", "LC_ALL=ru_RU.UTF-8", "TZ=Europe/Moscow"],
+        "image": "selenoid/vnc:chrome_75.0",
+        "tmpfs": {"/tmp": "size=512m"},
+        "hosts": ["x01.aidata.io:127.0.0.1"],
+        "port": "4444"
+      },
+      "76.0": {
+        "env": ["LANG=ru_RU.UTF-8", "LANGUAGE=ru:en", "LC_ALL=ru_RU.UTF-8", "TZ=Europe/Moscow"],
+        "image": "selenoid/vnc:chrome_76.0",
+        "tmpfs": {"/tmp": "size=512m"},
+        "hosts": ["x01.aidata.io:127.0.0.1"],
+        "port": "4444"
+      }
+    }
+  }
+}

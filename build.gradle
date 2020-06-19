@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compile('com.codeborne:selenide:5.11.1')
+    compile('org.aeonbits.owner:owner-java8:.0.12')
+    compile('io.qameta.allure:allure-java-commons:2.13.3')
+    compile('org.seleniumhq.selenium:selenium-java:3.141.59')
+    compile("com.fasterxml.jackson.core:jackson-databind:2.11.0")
+
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.3.0")
+    testCompile("org.junit.jupiter:junit-jupiter-engine:5.3.0")
+    testCompile("org.junit.jupiter:junit-jupiter-params:5.3.0")
+}
