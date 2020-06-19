@@ -2,8 +2,10 @@ package io.github.eroshenkoam;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Issue;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -31,6 +33,8 @@ public class GithubIssueTest {
     }
 
     @Test
+    @Issue("AE-1")
+    @DisplayName("Открываем сщуствующую Issue")
     public void testIssue() {
         step("Открываем главную страницу", () -> {
             open("https://github.com");
