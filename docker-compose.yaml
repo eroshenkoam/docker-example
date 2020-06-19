@@ -14,3 +14,19 @@ services:
     ports:
       - "4444:4444"
     network_mode: bridge
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    volumes:
+      - ${PWD}/work/jenkins:/var/jenkins_home
+    ports:
+      - 8000:8080
+    network_mode: bridge
+
+  jira:
+    image: atlassian/jira-software
+    volumes:
+      - "${PWD}/work/jira:/var/atlassian/application-data/jira"
+    ports:
+      - "9999:8080"
+    network_mode: bridge

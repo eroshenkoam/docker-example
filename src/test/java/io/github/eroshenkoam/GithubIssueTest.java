@@ -2,6 +2,7 @@ package io.github.eroshenkoam;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Issue;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -30,6 +31,7 @@ public class GithubIssueTest {
     }
 
     @Test
+    @Issue("AE-2")
     @DisplayName("Открываем сщуствующую Issue")
     public void testIssue() {
         step("Открываем главную страницу", () -> {
@@ -46,7 +48,7 @@ public class GithubIssueTest {
         });
         step("Проверяем title", () -> {
             $x("//a[@id='issue_12_link']").click();
-            $x("//h1[contains(@class, 'gh-header-title')]").should(Condition.text("Hello, World!"));
+            $x("//h1[contains(@class, 'gh-header-title')]").should(Condition.text("Hello, World!!!"));
         });
 
     }
