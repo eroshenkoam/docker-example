@@ -48,7 +48,7 @@ public class GithubIssueTest {
         });
         step("Проверяем title", () -> {
             $x("//a[@id='issue_12_link']").click();
-            $x("//h1[contains(@class, 'gh-header-title')]").should(Condition.text("Hello, World!!!"));
+            $x("//h1[contains(@class, 'gh-header-title')]").should(Condition.text("Hello, World!"));
         });
 
     }
